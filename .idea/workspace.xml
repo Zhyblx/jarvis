@@ -2,40 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lucene_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/_0.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/_0.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/_0.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/_1.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/_1.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/_1.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/segments_1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/SearchIndex/write.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/desktop/Unzip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/desktop/searchapp/Createindex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/desktop/searchapp/LucnenApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/operations/InsertData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/search/converter/DataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/search/folder/DeleteDirectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/search/folder/ScanDirectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/search/folder/ScanFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/search/lucnen/SearchBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_logging_1_2_javadoc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/jarvis/operations/ReadExcel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jarvis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jarvis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_database/CreateDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/CreateDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_database/InsertData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_documentation/AllFileScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/AllFileScan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_documentation/FileRename.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/FileRename.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_documentation/FileScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/FileScan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_documentation/FilesPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/FilesPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_documentation/IsFileExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/IsFileExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_documentation/RARExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/RARExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations_text/CharacterStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/CharacterStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/desktop/searchapp/LucnenApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/desktop/searchapp/LucnenApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +38,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="应用程序.LucnenApplication">
+  <component name="RunManager" selected="应用程序.ReadExcel">
     <configuration name="AmsUserPermissionsList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AmsUserPermissionsList" />
       <module name="jarvis" />
@@ -108,12 +80,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReadExcel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.ReadExcel" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.operations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unzip" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.desktop.Unzip" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jarvis.desktop.*" />
+          <option name="PATTERN" value="org.jarvis.operations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,13 +111,15 @@
       <item itemvalue="应用程序.Unzip" />
       <item itemvalue="应用程序.Createindex" />
       <item itemvalue="应用程序.LucnenApplication" />
+      <item itemvalue="应用程序.ReadExcel" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.ReadExcel" />
         <item itemvalue="应用程序.LucnenApplication" />
+        <item itemvalue="应用程序.AmsUserPermissionsList" />
         <item itemvalue="应用程序.Createindex" />
         <item itemvalue="应用程序.Unzip" />
-        <item itemvalue="应用程序.AmsUserPermissionsList" />
       </list>
     </recent_temporary>
   </component>

@@ -12,10 +12,10 @@ public class AmsUserPermissionsList {
 
     private String UM_distinctid = "175e3a2a6b9309-071f6b8ca0a5f5-63112c72-13c680-175e3a2a6ba7e5";
     private String Hm_lvt_27d5944aabe587561b8deef6b586aef4 = "1606377466,1606706674";
-    private String admin_auth_ticket = "0ad6efb06bc2b362765886163fcf724b";
-    private String JSESSIONID = "63d843f6-483f-492c-a0a8-bc667dbbaa54";
-    private String SESSION = "ZjE1NDA0NmYtNmFhZS00NGI4LWE3NDktMWMwMDdhY2ZkODU3";
-    private String user = "s%3AcV1y5oLqWM0H9KYuksuDv9uJ4daeaxUr.uwxPpVgk5I5qMvzKM7aygtjnXSI8p5pFWuGzS%2FO9djo";
+    private String admin_auth_ticket = "dbc64ee016dbcc0996f3a93665d53294";
+    private String JSESSIONID = "788cc43b-b644-459f-9f30-16276a206192";
+    private String SESSION = "MjQwY2NjNWQtYTFiMy00OTVmLTkwNDktZjM2YzNjOTQ3OTJh";
+    private String user = "s%3An-f9NOsvL3B87ribmuWjEFWbgeDG5UPW.2AaA1UYTIzkUSRM2%2F3DiOlH24ffwcQb6h8Y9Mpox9zQ";
 
     /**
      * 获取权限结构列表

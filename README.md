@@ -46,6 +46,7 @@
 |RARExtractor|getUntieRARFile(File sourceRar, File destDir)|sourceRar:rar文件所在路径<br> destDir:指定的解压路径|static void|实现rar压缩文件的解压|
 |CreateDataBase|setCreateDataBase(String sql)|sql:SQL语句|void|Sqlite文件型数据库的使用参考:创建数据库|
 |InsertData|setInsertData(String strSql) |sql:SQL语句|void|Sqlite文件型数据库的使用参考:向数据库中插入数据|
+|ReadExcel|setExcelCell(File file,String sheetName,int intCell)|file:Excel文件路径 <br> sheetName:Excel-Sheet名称 <br> intCell:Excel单元格 |String|读取Excel列数据|
 
 ----------------------------------------------------------------------------------------------------------------
 

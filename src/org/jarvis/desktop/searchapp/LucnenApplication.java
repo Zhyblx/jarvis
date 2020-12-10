@@ -12,7 +12,7 @@ public class LucnenApplication implements Runnable {
     @Override
     public void run() {
         try {
-            System.out.println("请输入搜索词……");
+            System.out.println("Boss你要搜什么？");
             Scanner scanner = new Scanner(System.in);
             String query = scanner.nextLine();//输入的关键词
 
