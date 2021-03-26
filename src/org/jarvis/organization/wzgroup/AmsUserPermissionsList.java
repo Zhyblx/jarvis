@@ -10,12 +10,12 @@ import java.util.*;
 
 public class AmsUserPermissionsList {
 
-    private String UM_distinctid = "175e3a2a6b9309-071f6b8ca0a5f5-63112c72-13c680-175e3a2a6ba7e5";
-    private String Hm_lvt_27d5944aabe587561b8deef6b586aef4 = "1606377466,1606706674";
-    private String admin_auth_ticket = "dbc64ee016dbcc0996f3a93665d53294";
-    private String JSESSIONID = "788cc43b-b644-459f-9f30-16276a206192";
+    private String UM_distinctid = "1768436374053e-0e995a91f92a0a-6d112d7c-13c680-1768436374192f";
+    private String Hm_lvt_27d5944aabe587561b8deef6b586aef4 = "1608167687,1608535914,1608779577,1608880640";
+    private String admin_auth_ticket = "e0e63287f1bd580203050939df0ccef1";
+    private String JSESSIONID = "e4e03c59ae2eb777a75000dc28d7715ddbb7c6fc";
     private String SESSION = "MjQwY2NjNWQtYTFiMy00OTVmLTkwNDktZjM2YzNjOTQ3OTJh";
-    private String user = "s%3An-f9NOsvL3B87ribmuWjEFWbgeDG5UPW.2AaA1UYTIzkUSRM2%2F3DiOlH24ffwcQb6h8Y9Mpox9zQ";
+    private String user = "s%3ATzovqqGzPS-B5P9QCMIewrsaj3uRHzTw.maYtzX02AtU1LGDiq2VTAbBK4JAY1luMVIoDgyq25HI";
 
     /**
      * 获取权限结构列表
