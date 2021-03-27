@@ -8,9 +8,15 @@ import org.jsoup.select.Elements;
 import java.io.File;
 
 //房地产项目信息
-
 public class EstateProjectInfo {
 
+    /**
+     * 金科项目信息
+     *
+     * @param shenghui
+     * @param city
+     * @throws Exception
+     */
     public void getJinKeProjectInfo(String shenghui, String city) throws Exception {
         Connection connection = Jsoup
                 .connect("https://www.jinke.com/skin/default/project/index.php?shenghui="
@@ -31,6 +37,12 @@ public class EstateProjectInfo {
         System.out.println(div_p.html().toString());
 
     }
+
+    /**
+     * 苏宁项目信息
+     *
+     * @throws Exception
+     */
 
     public void getSuNingProjectInfo() throws Exception {
         String[] strAddress = {
@@ -66,33 +78,36 @@ public class EstateProjectInfo {
     }
 
     // 财务数据
-    public void getFinanceTableInfo() throws Exception {
-        /*
-         * 年度报告
-         * 按单季度
-         * 单季报告
-         *
-         */
 
-        String[] strAddress1={
+    /**
+     * 金科财务数据：
+     * 1.年度报告
+     * 2.按单季度
+     * 3.单季报告
+     *
+     * @throws Exception
+     */
+    public void getFinanceTableInfo() throws Exception {
+
+        String[] strAddress1 = {
                 "/Users/zhangyibin/Downloads/按报告期.html",
                 "/Users/zhangyibin/Downloads/按年度.html",
                 "/Users/zhangyibin/Downloads/按单季度.html"
         };
 
-        for(int i=0;i<strAddress1.length;i++){
+        for (int i = 0; i < strAddress1.length; i++) {
             File file_3 =
                     new File(strAddress1[i]);
             Document document_3 = Jsoup.parse(file_3, "UTF-8", "");
             Elements elements_3 = document_3.select("[id=F10MainTargetDiv]");
             Elements elements1_3 = elements_3.select("tbody").select("tr");
-            if(i==0){
+            if (i == 0) {
                 System.out.println("按报告期");
 
-            }else if(i==1){
+            } else if (i == 1) {
                 System.out.println("按年度");
 
-            }else if(i==2){
+            } else if (i == 2) {
                 System.out.println("按单季度");
 
             }
@@ -107,7 +122,7 @@ public class EstateProjectInfo {
     }
 
     public static void main(String[] args) throws Exception {
-        EstateProjectInfo estateProjectInfo =new EstateProjectInfo();
+        EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
 
         estateProjectInfo.getFinanceTableInfo();
 
