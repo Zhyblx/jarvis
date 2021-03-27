@@ -21,6 +21,8 @@
 |Class(名称)|Method(方法)|parameter(参数)|Modifier and Type(返回类型)|Description(描述)|
 |---|---|---|---|---|
 |AmsUserPermissionsList|main(String[] args)|String[] args|static void|获取AMS权限管理系统的数据结构|
+|EstateProjectInfo|main(String[] args)|String[] args|static void|房地产项目信息|
+
 ----------------------------------------------------------------------------------------------------------------
 
 #### -desktop(桌面)-
