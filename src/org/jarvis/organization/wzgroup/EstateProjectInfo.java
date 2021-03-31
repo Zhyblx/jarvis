@@ -77,13 +77,11 @@ public class EstateProjectInfo {
         }
     }
 
-    // 财务数据
-
     /**
-     * 金科财务数据：
-     * 1.年度报告
-     * 2.按单季度
-     * 3.单季报告
+     * 财务数据：
+     * 1.按报告期
+     * 2.按年度
+     * 3.按单季度
      *
      * @throws Exception
      */
@@ -121,26 +119,76 @@ public class EstateProjectInfo {
 
     }
 
-    public static void main(String[] args) throws Exception {
-        EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
+    /**
+     * Asset liability ratio：资产负债表
+     * <p>
+     * 1.按报告期
+     * 2.按年度
+     * 3.报告期同比
+     * 4.年度同比
+     */
 
-        estateProjectInfo.getFinanceTableInfo();
+    public void getAssetLiabilityRatio() throws Exception {
+        String[] strAddress = {
+                "/Users/zhangyibin/Downloads/按报告期.html",
+                "/Users/zhangyibin/Downloads/按年度.html",
+                "/Users/zhangyibin/Downloads/报告期同比.html",
+                "/Users/zhangyibin/Downloads/年度同比.html"
 
-        estateProjectInfo.getSuNingProjectInfo();
-
-        String[] word = new String[]{
-                "重庆", "贵州", "四川", "陕西", "北京",
-                "天津", "河北", "辽宁", "山西", "山东",
-                "河南", "江苏", "安徽", "江西", "广西",
-                "云南", "广东", "福建", "浙江", "上海", "湖北", "湖南", "新疆"
         };
 
-        for (String str : word) {
-            estateProjectInfo.getJinKeProjectInfo(str, "");
+        for (int j = 0; j < strAddress.length; j++) {
+            File file = new File(strAddress[j]);
+
+            Document document = Jsoup.parse(file, "UTF-8", "");
+            Elements elements = document.select("[id=report_zcfzb]");
+            Elements elements_table = elements.select("tbody").select("tr");
+            if (j == 0) {
+                System.out.println("按报告期");
+
+            } else if (j == 1) {
+                System.out.println("按年度");
+
+            } else if (j == 2) {
+                System.out.println("报告期同比");
+
+            } else if (j == 3) {
+                System.out.println("年度同比");
+
+            }
+
+            for (int i = 0; i < elements_table.size(); i++) {
+                System.out.println(elements_table.get(i).text());
+
+            }
             System.out.println("");
 
 
         }
+
+    }
+
+    public static void main(String[] args) throws Exception {
+        EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
+        estateProjectInfo.getAssetLiabilityRatio();
+
+//        estateProjectInfo.getFinanceTableInfo();
+
+//        estateProjectInfo.getSuNingProjectInfo();
+
+//        String[] word = new String[]{
+//                "重庆", "贵州", "四川", "陕西", "北京",
+//                "天津", "河北", "辽宁", "山西", "山东",
+//                "河南", "江苏", "安徽", "江西", "广西",
+//                "云南", "广东", "福建", "浙江", "上海", "湖北", "湖南", "新疆"
+//        };
+//
+//        for (String str : word) {
+//            estateProjectInfo.getJinKeProjectInfo(str, "");
+//            System.out.println("");
+//
+//
+//        }
 
     }
 }

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,17 +114,17 @@
     <list>
       <item itemvalue="应用程序.AmsUserPermissionsList" />
       <item itemvalue="应用程序.Createindex" />
+      <item itemvalue="应用程序.EstateProjectInfo" />
       <item itemvalue="应用程序.LucnenApplication" />
       <item itemvalue="应用程序.test" />
-      <item itemvalue="应用程序.EstateProjectInfo" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.EstateProjectInfo" />
-        <item itemvalue="应用程序.LucnenApplication" />
-        <item itemvalue="应用程序.AmsUserPermissionsList" />
         <item itemvalue="应用程序.test" />
+        <item itemvalue="应用程序.LucnenApplication" />
         <item itemvalue="应用程序.Createindex" />
+        <item itemvalue="应用程序.AmsUserPermissionsList" />
       </list>
     </recent_temporary>
   </component>

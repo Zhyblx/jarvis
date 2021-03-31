@@ -50,6 +50,7 @@
 |InsertData|setInsertData(String strSql) |sql:SQL语句|void|Sqlite文件型数据库的使用参考:向数据库中插入数据|
 |ReadExcel|setExcelCell(File file,String sheetName,int intCell)|file:Excel文件路径 <br> sheetName:Excel-Sheet名称 <br> intCell:Excel单元格 |String|读取Excel列数据|
 
+* 查看爬虫robots协议的方法是"在网站URL后面输入：robots.txt "；例如：https://www.jinke.com/robots.txt
 ----------------------------------------------------------------------------------------------------------------
 
 #### -search(搜索)-
