@@ -20,8 +20,8 @@
 
 |Class(名称)|Method(方法)|parameter(参数)|Modifier and Type(返回类型)|Description(描述)|
 |---|---|---|---|---|
-|AmsUserPermissionsList|main(String[] args)|String[] args|static void|获取AMS权限管理系统的数据结构|
-|EstateProjectInfo|main(String[] args)|String[] args|static void|房地产项目信息|
+|AmsUserPermissionsList|main(String[] args)|--|--|获取AMS权限管理系统的数据结构|
+|EstateProjectInfo|main(String[] args)|--|--|房地产项目信息|
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -29,9 +29,9 @@
 
 |Class(名称)|Method(方法)|parameter(参数)|Modifier and Type(返回类型)|Description(描述)|
 |---|---|---|---|---|
-|Unzip|main(String[] args)|String[] args|static void|实现解压rar文件|
-|searchapp.Createindex|main(String[] args)|String[] args|static void|创建本地文件索引|
-|searchapp.LucnenApplication|main(String[] args)|String[] args|static void|本地文件搜索应用|
+|Unzip|main(String[] args)|--|--|实现解压rar文件|
+|searchapp.Createindex|main(String[] args)|--|--|创建本地文件索引|
+|searchapp.LucnenApplication|main(String[] args)|--|--|本地文件搜索应用|
 
 ----------------------------------------------------------------------------------------------------------------
 
