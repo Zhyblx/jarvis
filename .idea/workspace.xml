@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="" />
+    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,10 +119,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.EstateProjectInfo" />
+        <item itemvalue="应用程序.AmsUserPermissionsList" />
         <item itemvalue="应用程序.test" />
         <item itemvalue="应用程序.LucnenApplication" />
         <item itemvalue="应用程序.Createindex" />
-        <item itemvalue="应用程序.AmsUserPermissionsList" />
       </list>
     </recent_temporary>
   </component>

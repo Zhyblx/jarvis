@@ -82,7 +82,7 @@ public class EstateProjectInfo {
      * 1.按报告期
      * 2.按年度
      * 3.按单季度
-     *
+     * 4.数据来源：http://f10.eastmoney.com/f10_v2/FinanceAnalysis.aspx?code=sz000656#bfbbb-0
      * @throws Exception
      */
     public void getFinanceTableInfo() throws Exception {
@@ -126,6 +126,7 @@ public class EstateProjectInfo {
      * 2.按年度
      * 3.报告期同比
      * 4.年度同比
+     * 5.数据来源：http://f10.eastmoney.com/f10_v2/FinanceAnalysis.aspx?code=sz000656#bfbbb-0
      */
 
     public void getAssetLiabilityRatio() throws Exception {
@@ -170,9 +171,9 @@ public class EstateProjectInfo {
 
     public static void main(String[] args) throws Exception {
         EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
-        estateProjectInfo.getAssetLiabilityRatio();
+//        estateProjectInfo.getAssetLiabilityRatio();
 
-//        estateProjectInfo.getFinanceTableInfo();
+        estateProjectInfo.getFinanceTableInfo();
 
 //        estateProjectInfo.getSuNingProjectInfo();
 
