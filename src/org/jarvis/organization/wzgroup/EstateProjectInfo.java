@@ -164,32 +164,48 @@ public class EstateProjectInfo {
             }
             System.out.println("");
 
-
         }
+    }
 
+    public void getFangProjectInfo() throws Exception {
+        String[] strAddress = {"/Users/zhangyibin/Downloads/城市版-企业-项目布局.html"};
+        for(int i=0;i<strAddress.length;i++){
+            File file = new File(strAddress[i]);
+            Document document = Jsoup.parse(file, "UTF-8", "");
+            Elements title=document.select("[class=cont_tit mt05 clearfix]");
+            Elements title_fl=title.select("[class=fl]");
+//            System.out.println(title_fl.text());
+
+            Elements divContent=document.select("[class=cont_tblist cont_tblist-floating]");
+            Elements tbody=divContent.select("tbody").select("tr");
+            for(int j=0;j<tbody.size();j++){
+                System.out.println(title_fl.text()+" "+tbody.get(j).text());
+            }
+        }
     }
 
     public static void main(String[] args) throws Exception {
         EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
+//        estateProjectInfo.getFangProjectInfo();
 //        estateProjectInfo.getAssetLiabilityRatio();
 
-        estateProjectInfo.getFinanceTableInfo();
+//        estateProjectInfo.getFinanceTableInfo();
 
 //        estateProjectInfo.getSuNingProjectInfo();
 
-//        String[] word = new String[]{
-//                "重庆", "贵州", "四川", "陕西", "北京",
-//                "天津", "河北", "辽宁", "山西", "山东",
-//                "河南", "江苏", "安徽", "江西", "广西",
-//                "云南", "广东", "福建", "浙江", "上海", "湖北", "湖南", "新疆"
-//        };
-//
-//        for (String str : word) {
-//            estateProjectInfo.getJinKeProjectInfo(str, "");
-//            System.out.println("");
-//
-//
-//        }
+        String[] word = new String[]{
+                "重庆", "贵州", "四川", "陕西", "北京",
+                "天津", "河北", "辽宁", "山西", "山东",
+                "河南", "江苏", "安徽", "江西", "广西",
+                "云南", "广东", "福建", "浙江", "上海", "湖北", "湖南", "新疆"
+        };
+
+        for (String str : word) {
+            estateProjectInfo.getJinKeProjectInfo(str, "");
+            System.out.println("");
+
+
+        }
 
     }
 }

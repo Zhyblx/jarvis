@@ -49,6 +49,8 @@
 |CreateDataBase|setCreateDataBase(String sql)|sql:SQL语句|void|Sqlite文件型数据库的使用参考:创建数据库|
 |InsertData|setInsertData(String strSql) |sql:SQL语句|void|Sqlite文件型数据库的使用参考:向数据库中插入数据|
 |ReadExcel|setExcelCell(File file,String sheetName,int intCell)|file:Excel文件路径 <br> sheetName:Excel-Sheet名称 <br> intCell:Excel单元格 |String|读取Excel列数据|
+|OCR|getHighPrecisionParsingData(String picturePath)|picturePath:图片地址|List<String>|调用OCR高精度解析方法|
+|OCR|getOrdinaryParsingData(String picturePath)|picturePath:图片地址|List<String>|调用OCR普通解析方法|
 
 * 查看爬虫robots协议的方法是"在网站URL后面输入：robots.txt "；例如：https://www.jinke.com/robots.txt
 ----------------------------------------------------------------------------------------------------------------

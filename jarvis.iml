@@ -11,5 +11,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="lucene-7.6" level="project" />
     <orderEntry type="library" name="poi" level="project" />
+    <orderEntry type="library" name="baidu-sdk-4.15" level="project" />
   </component>
 </module>

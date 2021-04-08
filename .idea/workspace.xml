@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/baidu_sdk_4_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/jarvis/operations/OCR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jarvis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,26 +53,13 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="应用程序.EstateProjectInfo">
+  <component name="RunManager" selected="应用程序.OCR">
     <configuration name="AmsUserPermissionsList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AmsUserPermissionsList" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Createindex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.desktop.searchapp.Createindex" />
-      <module name="jarvis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jarvis.desktop.searchapp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,6 +87,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OCR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.OCR" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.operations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.test" />
       <module name="jarvis" />
@@ -111,18 +115,18 @@
     </configuration>
     <list>
       <item itemvalue="应用程序.AmsUserPermissionsList" />
-      <item itemvalue="应用程序.Createindex" />
       <item itemvalue="应用程序.EstateProjectInfo" />
       <item itemvalue="应用程序.LucnenApplication" />
       <item itemvalue="应用程序.test" />
+      <item itemvalue="应用程序.OCR" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.OCR" />
         <item itemvalue="应用程序.EstateProjectInfo" />
         <item itemvalue="应用程序.AmsUserPermissionsList" />
         <item itemvalue="应用程序.test" />
         <item itemvalue="应用程序.LucnenApplication" />
-        <item itemvalue="应用程序.Createindex" />
       </list>
     </recent_temporary>
   </component>
