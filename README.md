@@ -22,7 +22,7 @@
 |---|---|---|---|---|
 |AmsUserPermissionsList|main(String[] args)|--|--|获取AMS权限管理系统的数据结构|
 |EstateProjectInfo|main(String[] args)|--|--|房地产项目信息|
-
+|AddressInfo|getAddressInfo(String name) |String name:地址名称|String|地址库解析|
 ----------------------------------------------------------------------------------------------------------------
 
 #### -desktop(桌面)-
@@ -51,6 +51,7 @@
 |ReadExcel|setExcelCell(File file,String sheetName,int intCell)|file:Excel文件路径 <br> sheetName:Excel-Sheet名称 <br> intCell:Excel单元格 |String|读取Excel列数据|
 |OCR|getHighPrecisionParsingData(String picturePath)|picturePath:图片地址|List<String>|调用OCR高精度解析方法|
 |OCR|getOrdinaryParsingData(String picturePath)|picturePath:图片地址|List<String>|调用OCR普通解析方法|
+|PhantomJs|getHtmlJs(String url)|String url:网址|String|PhantomJS是一个可编程的无头浏览器；<br>使用场景：<br>1.页面自动化测试;<br>2.网页监控;<br>3.网络爬虫|
 
 * 查看爬虫robots协议的方法是"在网站URL后面输入：robots.txt "；例如：https://www.jinke.com/robots.txt
 ----------------------------------------------------------------------------------------------------------------

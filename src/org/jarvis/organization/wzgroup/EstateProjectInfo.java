@@ -1,5 +1,6 @@
 package org.jarvis.organization.wzgroup;
 
+import org.jarvis.operations.PhantomJs;
 import org.jsoup.Jsoup;
 import org.jsoup.Connection;
 import org.jsoup.nodes.Document;
@@ -9,6 +10,8 @@ import java.io.File;
 
 //房地产项目信息
 public class EstateProjectInfo {
+
+    private AddressInfo addressInfo = new AddressInfo();
 
     /**
      * 金科项目信息
@@ -83,6 +86,7 @@ public class EstateProjectInfo {
      * 2.按年度
      * 3.按单季度
      * 4.数据来源：http://f10.eastmoney.com/f10_v2/FinanceAnalysis.aspx?code=sz000656#bfbbb-0
+     *
      * @throws Exception
      */
     public void getFinanceTableInfo() throws Exception {
@@ -167,45 +171,287 @@ public class EstateProjectInfo {
         }
     }
 
+    /**
+     * 房天下项目布局
+     *
+     * @throws Exception
+     */
     public void getFangProjectInfo() throws Exception {
         String[] strAddress = {"/Users/zhangyibin/Downloads/城市版-企业-项目布局.html"};
-        for(int i=0;i<strAddress.length;i++){
+        for (int i = 0; i < strAddress.length; i++) {
             File file = new File(strAddress[i]);
             Document document = Jsoup.parse(file, "UTF-8", "");
-            Elements title=document.select("[class=cont_tit mt05 clearfix]");
-            Elements title_fl=title.select("[class=fl]");
+            Elements title = document.select("[class=cont_tit mt05 clearfix]");
+            Elements title_fl = title.select("[class=fl]");
 //            System.out.println(title_fl.text());
 
-            Elements divContent=document.select("[class=cont_tblist cont_tblist-floating]");
-            Elements tbody=divContent.select("tbody").select("tr");
-            for(int j=0;j<tbody.size();j++){
-                System.out.println(title_fl.text()+" "+tbody.get(j).text());
+            Elements divContent = document.select("[class=cont_tblist cont_tblist-floating]");
+            Elements tbody = divContent.select("tbody").select("tr");
+            for (int j = 0; j < tbody.size(); j++) {
+                System.out.println(title_fl.text() + " " + tbody.get(j).text());
             }
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
-//        estateProjectInfo.getFangProjectInfo();
-//        estateProjectInfo.getAssetLiabilityRatio();
+    /**
+     * 恒大项目
+     *
+     * @throws Exception
+     */
+    public void getEvergrandeInfo() throws Exception {
+        AddressInfo addressInfo = new AddressInfo();
+        String[] strAddressArray = {
+                "河南", "江苏", "山东", "北京",
+                "四川", "深圳", "华东", "广西",
+                "湖北", "江西", "贵州", "湖南", "辽宁", "福建",
+                "安徽", "珠三角", "山西", "内蒙古", "吉林",
+                "黑龙江", "甘肃", "云南", "陕西", "海南", "新疆"};
+        for (String str : strAddressArray) {
+            File file = new File("/Users/zhangyibin/Downloads/HTML/" + str + ".html");
+            Document document = Jsoup.parse(file, "UTF-8", "");
+            Elements elements = document.select("[class=projs clearfix]");
+            Elements elements1 = elements.select("[class=proj Blist]").select("p");
+            for (int i = 0; i < elements1.size(); i++) {
+                String info = elements1.get(i).text().toString();
+                try {
+                    String city = info.substring(0, info.indexOf("恒"));
+                    System.out.println(addressInfo.getAddressInfo(city) + "," + info);
 
-//        estateProjectInfo.getFinanceTableInfo();
+                } catch (Exception e) {
+                    System.out.println("null" + "," + "null" + "," + info);
+                }
+            }
+        }
+    }
 
-//        estateProjectInfo.getSuNingProjectInfo();
-
-        String[] word = new String[]{
-                "重庆", "贵州", "四川", "陕西", "北京",
-                "天津", "河北", "辽宁", "山西", "山东",
-                "河南", "江苏", "安徽", "江西", "广西",
-                "云南", "广东", "福建", "浙江", "上海", "湖北", "湖南", "新疆"
-        };
-
-        for (String str : word) {
-            estateProjectInfo.getJinKeProjectInfo(str, "");
-            System.out.println("");
-
+    /**
+     * 龙湖项目
+     *
+     * @throws Exception
+     */
+    public void getLongForInfo() throws Exception {
+        AddressInfo addressInfo = new AddressInfo();
+        // 分类： 办公、待公布：车位、商铺1、2
+        File file = new File("/Users/zhangyibin/Downloads/HTML/商铺2.html");
+        Document document = Jsoup.parse(file, "UTF-8", "");
+        Elements projectList_box = document.select("[class=projectList_box]");
+        Elements projectList_left = projectList_box.select("[class=projectList_left]");
+        Elements project_item = projectList_left.select("[class=project-item]");
+        for (int i = 0; i < project_item.size(); i++) {
+            Elements elements = project_item.get(i).select("[class=item-name text-eli]");
+            String data = elements.text();
+            String city = data.substring(0, data.indexOf(" "));
+            String project = data.substring(data.indexOf(" ") + 1, data.length());
+            System.out.println(addressInfo.getAddressInfo(city) + "," + project);
 
         }
+    }
+
+    /**
+     * 中国铁建
+     *
+     * @throws Exception
+     */
+    public void getCrccreInfo() throws Exception {
+        for (int j = 1; j < 16; j++) {
+            Connection connection = Jsoup.connect("http://crccre.crcc.cn/jrobotwww/search.do?webid=29&pg=12&p="
+                    + j + "&tpl=&category=%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8&q=&pos=&od=&date=&date=&criteria_field_1954=&criteria_field_2004=&criteria_field_2005=&criteria_field_2006=");
+            connection.ignoreContentType(true);
+            connection.timeout(5000);
+            connection.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) " +
+                    "AppleWebKit/537.36 (KHTML, like Gecko) " +
+                    "Chrome/81.0.4044.122 Safari/537.36");
+            Document document = connection.get();
+            Elements box = document.select("[class=jsearch-result-box pic-box]");
+            for (int i = 0; i < box.size(); i++) {
+                Elements title = box.get(i).select("[class=pic-title]");
+                String data = title.select("a").text();
+                String address = title.select("[class=xmlbaddress]").text();
+                String addressInfoc = address.substring(address.indexOf("地址：") + 3, address.length());
+//            System.out.println(data+","+addressInfo);
+                System.out.println(addressInfo.getAddressInfo(addressInfoc) + "," + data);
+
+            }
+        }
+    }
+
+    /**
+     * 合景泰富集团
+     *
+     * @throws Exception
+     */
+    public void getKwgGroupHoldings() throws Exception {
+        String[] strFile = {"住宅地产", "写字楼", "购物中心"};
+
+        for (String str : strFile) {
+            File file = new File("/Users/zhangyibin/Downloads/HTML/" + str + ".html");
+            Document document = Jsoup.parse(file, "UTF-8", "");
+            Elements div2 = document.select("[id=div2]");
+            Elements eList = div2.select("[class=c_list c_list_m]");
+            Elements fadeInUp = eList.select("[class=wow z_fadeInUp animated]");
+            for (int i = 0; i < fadeInUp.size(); i++) {
+                Elements contP = fadeInUp.get(i).select("[class=contP]");
+                String address = contP.select("p").text();
+                String data = contP.select("h4").text();
+                try {
+                    System.out.println(addressInfo.getAddressInfo(address) + "," + data + "," + str);
+
+                } catch (Exception e) {
+                    System.out.println(address + "," + data + "," + str);
+
+                }
+            }
+        }
+    }
+
+    /**
+     * 祥生地产集团
+     *
+     * @throws Exception
+     */
+    public void getXsjt() throws Exception {
+        String[] strAddress = {"杭州", "宁波", "绍兴", "舟山", "台州", "湖州",
+                "衢州", "嘉兴", "温州", "丽水", "滁州", "宣城", "芜湖", "宿州",
+                "马鞍山", "安庆", "合肥", "泰州", "连云港", "南通", "宿迁", "苏州",
+                "扬州", "盐城", "南京", "镇江", "武汉", "仙桃", "荆州", "荆门", "济宁",
+                "济南", "聊城", "上饶", "九江", "抚州", "岳阳", "常德", "衡阳", "南平",
+                "上海", "呼和浩特"};
+
+        for (String str : strAddress) {
+            try {
+                System.out.println("--" + str);
+                File file = new File("/Users/zhangyibin/Downloads/HTML/" + str + ".html");
+                Document document = Jsoup.parse(file, "UTF-8", "");
+                Elements elements = document.select("[class=det f-cb]");
+                for (int i = 0; i < elements.size(); i++) {
+                    String href = elements.get(i).select("a").text().toString();
+                    String data = href.replaceAll(" ", "\r\n");
+                    System.out.println(data);
+
+                }
+                System.out.println("");
+
+            } catch (Exception e) {
+                // 异常不处理
+
+            }
+
+        }
+    }
+
+    /**
+     * 奥园集团有限公司
+     * 地产项目
+     *
+     * @throws Exception
+     */
+    public void getAoyuanRealEstate() throws Exception {
+        PhantomJs phantomJs = new PhantomJs();
+        String Url="https://www.aoyuan.com.cn/realEstate/realEstate.aspx?strm=115001001&page="; //地产项目-15页
+//        String Url = "https://www.aoyuan.com.cn/realEstate/realEstate.aspx?strm=115007002&page="; //商业项目-4页
+
+        for (int j = 1; j < 5; j++) {
+            try {
+                String html = phantomJs.getHtmlJs(Url + j);
+                Document document = Jsoup.parse(html);
+                Elements docList = document.select("[class=list]");
+                Elements projectName = docList.select("[class=name]");
+                Elements projectAddress = docList.select("[class=box]");
+
+                for (int i = 0; i < projectName.size(); i++) {
+                    System.out.println(
+                            addressInfo.getAddressInfo(projectAddress.get(i).select("p").text())
+                                    + ","
+                                    + projectName.get(i).text());
+
+                }
+
+            } catch (Exception e) {
+                // 异常不处理
+            }
+        }
+    }
+
+    /**
+     * 重庆华宇集团有限公司
+     *
+     * @throws Exception
+     */
+    public void getCqhyrc() throws Exception {
+        File file = new File("/Users/zhangyibin/Downloads/HTML/安徽.html");
+        Document document = Jsoup.parse(file, "UTF-8", "");
+        Elements div_list = document.select("[class=in_list]");
+        for (int i = 0; i < div_list.size(); i++) {
+            String str = "[name=div_list_" + (i + 1) + "]";
+            if (i == 0) {
+                System.out.println("重庆");
+            }
+            if (i == 1) {
+                System.out.println("四川");
+            }
+            if (i == 2) {
+                System.out.println("江苏");
+            }
+            if (i == 3) {
+                System.out.println("安徽");
+            }
+            if (i == 4) {
+                System.out.println("浙江");
+            }
+            if (i == 5) {
+                System.out.println("辽宁");
+            }
+            if (i == 6) {
+                System.out.println("湖北");
+            }
+            if (i == 7) {
+                System.out.println("河南");
+            }
+            if (i == 8) {
+                System.out.println("陕西");
+            }
+            if (i == 9) {
+                System.out.println("天津");
+            }
+            if (i == 10) {
+                System.out.println("广东");
+            }
+            Elements elements = div_list.select(str);
+            String href = elements.select("a").text().toString();
+            String data = href.replaceAll(" ", "\r\n");
+            System.out.println(data);
+            System.out.println("");
+
+        }
+
+    }
+
+    public static void main(String[] args) throws Exception {
+        EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
+//        estateProjectInfo.getCqhyrc();
+        estateProjectInfo.getAoyuanRealEstate();
+//        estateProjectInfo.getXsjt();
+//        estateProjectInfo.getKwgGroupHoldings();
+//        estateProjectInfo.getCrccreInfo();
+//        estateProjectInfo.getLongForInfo();
+//        estateProjectInfo.getEvergrandeInfo();
+//        estateProjectInfo.getFangProjectInfo();
+//        estateProjectInfo.getAssetLiabilityRatio();
+//        estateProjectInfo.getFinanceTableInfo();
+//        estateProjectInfo.getSuNingProjectInfo();
+
+//        String[] word = new String[]{
+//                "重庆", "贵州", "四川", "陕西", "北京",
+//                "天津", "河北", "辽宁", "山西", "山东",
+//                "河南", "江苏", "安徽", "江西", "广西",
+//                "云南", "广东", "福建", "浙江", "上海", "湖北", "湖南", "新疆"
+//        };
+//        for (String str : word) {
+//            estateProjectInfo.getJinKeProjectInfo(str, "");
+//            System.out.println("");
+//
+//
+//        }
 
     }
 }
