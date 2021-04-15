@@ -200,12 +200,13 @@ public class EstateProjectInfo {
      */
     public void getEvergrandeInfo() throws Exception {
         AddressInfo addressInfo = new AddressInfo();
-        String[] strAddressArray = {
-                "河南", "江苏", "山东", "北京",
-                "四川", "深圳", "华东", "广西",
-                "湖北", "江西", "贵州", "湖南", "辽宁", "福建",
-                "安徽", "珠三角", "山西", "内蒙古", "吉林",
-                "黑龙江", "甘肃", "云南", "陕西", "海南", "新疆"};
+//        String[] strAddressArray = {
+//                "河南", "江苏", "山东", "北京",
+//                "四川", "深圳", "华东", "广西",
+//                "湖北", "江西", "贵州", "湖南", "辽宁", "福建",
+//                "安徽", "珠三角", "山西", "内蒙古", "吉林",
+//                "黑龙江", "甘肃", "云南", "陕西", "海南", "新疆"};
+        String[] strAddressArray = {"重庆"};
         for (String str : strAddressArray) {
             File file = new File("/Users/zhangyibin/Downloads/HTML/" + str + ".html");
             Document document = Jsoup.parse(file, "UTF-8", "");
@@ -232,7 +233,7 @@ public class EstateProjectInfo {
     public void getLongForInfo() throws Exception {
         AddressInfo addressInfo = new AddressInfo();
         // 分类： 办公、待公布：车位、商铺1、2
-        File file = new File("/Users/zhangyibin/Downloads/HTML/商铺2.html");
+        File file = new File("/Users/zhangyibin/Downloads/HTML/待公布.html");
         Document document = Jsoup.parse(file, "UTF-8", "");
         Elements projectList_box = document.select("[class=projectList_box]");
         Elements projectList_left = projectList_box.select("[class=projectList_left]");
@@ -347,24 +348,24 @@ public class EstateProjectInfo {
      */
     public void getAoyuanRealEstate() throws Exception {
         PhantomJs phantomJs = new PhantomJs();
-        String Url="https://www.aoyuan.com.cn/realEstate/realEstate.aspx?strm=115001001&page="; //地产项目-15页
+        String Url = "https://www.aoyuan.com.cn/realEstate/realEstate.aspx?strm=115001001&page="; //地产项目-15页
 //        String Url = "https://www.aoyuan.com.cn/realEstate/realEstate.aspx?strm=115007002&page="; //商业项目-4页
 
-        for (int j = 1; j < 5; j++) {
+        for (int j = 1; j < 16; j++) {
             try {
                 String html = phantomJs.getHtmlJs(Url + j);
                 Document document = Jsoup.parse(html);
                 Elements docList = document.select("[class=list]");
-                Elements projectName = docList.select("[class=name]");
-                Elements projectAddress = docList.select("[class=box]");
-
-                for (int i = 0; i < projectName.size(); i++) {
-                    System.out.println(
-                            addressInfo.getAddressInfo(projectAddress.get(i).select("p").text())
-                                    + ","
-                                    + projectName.get(i).text());
-
-                }
+                Elements projectName = docList.select("ul").select("li").select("[class=name]");
+                System.out.println(projectName.html());// 这里一定要打印以下才可以输出完整的数据
+                Elements projectAddress = docList.select("ul").select("li").select("[class=box]");
+//                for (int i = 2; i < projectName.size()+2; i++) {
+//                    System.out.println(
+//                            addressInfo.getAddressInfo(projectAddress.get(i).select("p").text())
+//                                    + ","
+//                                    + projectName.get(i).text());
+//
+//                }
 
             } catch (Exception e) {
                 // 异常不处理
@@ -423,13 +424,130 @@ public class EstateProjectInfo {
             System.out.println("");
 
         }
+    }
 
+    /**
+     * 中国金茂控股集团有限公司
+     *
+     * @throws Exception
+     */
+    public void getChinaJinMao() throws Exception {
+        Document document = null;
+        Elements contentPane = null;
+        /*
+         * 城市运营{34766、34767、34768 }
+         *
+         * 酒店经营{23486}
+         *
+         * 零售商业{23487}
+         *
+         * 商务租赁{23483}
+         *
+         * 物业开发{23471、23510、23511}
+         *
+         */
+
+        String[] type = {"城市运营", "酒店经营", "零售商业", "商务租赁", "物业开发"};
+        for (String strType : type) {
+            document = Jsoup
+                    .parse(new File("/Users/zhangyibin/Downloads/HTML/" + strType + ".html"),
+                            "UTF-8", "");
+            contentPane = document.select("[id=dnn_ContentPane]");
+            if (strType.equals("城市运营")) {
+                String[] id = {"34766", "34767", "34768"};
+                for (String str_id : id) {
+                    //System.out.println("id>>>"+str_id);
+                    Elements content_id = contentPane.select("[id=Content-" + str_id + "]");
+                    Elements title = content_id.select("[class=xcsyy-news-item-title]");
+                    String project = title.text().toString();
+                    String data = project.replaceAll(" ", "\r\n");
+                    System.out.println(data);
+
+                }
+            }
+
+            if (strType.equals("酒店经营")) {
+                String[] id = {"23486"};
+                for (String str_id : id) {
+                    //System.out.println("id>>>"+str_id);
+                    Elements content_id = contentPane.select("[id=Content-" + str_id + "]");
+                    Elements title = content_id.select("[class=xcsyy-news-item-title]");
+                    String project = title.text().toString();
+                    String data = project.replaceAll(" ", "\r\n");
+                    System.out.println(data);
+
+                }
+            }
+
+            if (strType.equals("零售商业")) {
+                String[] id = {"23487"};
+                for (String str_id : id) {
+                    //System.out.println("id>>>"+str_id);
+                    Elements content_id = contentPane.select("[id=Content-" + str_id + "]");
+                    Elements title = content_id.select("[class=xcsyy-news-item-title]");
+                    String project = title.text().toString();
+                    String data = project.replaceAll(" ", "\r\n");
+                    System.out.println(data);
+
+                }
+            }
+
+            if (strType.equals("商务租赁")) {
+                String[] id = {"23483"};
+                for (String str_id : id) {
+                    //System.out.println("id>>>"+str_id);
+                    Elements content_id = contentPane.select("[id=Content-" + str_id + "]");
+                    Elements title = content_id.select("[class=xcsyy-news-item-title]");
+                    String project = title.text().toString();
+                    String data = project.replaceAll(" ", "\r\n");
+                    System.out.println(data);
+
+                }
+            }
+
+            if (strType.equals("物业开发")) {
+                String[] id = {"23471", "23510", "23511"};
+                for (String str_id : id) {
+                    //System.out.println("id>>>"+str_id);
+                    Elements content_id = contentPane.select("[id=Content-" + str_id + "]");
+                    Elements title = content_id.select("[class=wykf-news-item-title]");
+                    String project = title.text().toString();
+                    String data = project.replaceAll(" ", "\r\n");
+                    System.out.println(data);
+
+                }
+            }
+
+        }
+
+    }
+
+    /**
+     * 优采项目
+     *
+     * @throws Exception
+     */
+    public void getYouCaiYunIndustryInfo() throws Exception {
+        String[] strIndustryInfo = {"机电类", "精装修", "建筑部品", "设计类",
+                "土建类", "市政园林类", "勘察检测类", "咨询服务类", "游乐设施", "招商运营"};
+        for (String str : strIndustryInfo) {
+            File file = new File("/Users/zhangyibin/Downloads/HTML/" + str + ".html");
+            Document document = Jsoup.parse(file, "UTF-8", "");
+            Elements elements = document.select("[class=checklogolist clfenleibnox layui-clear ]").select("li");
+            for (int i = 0; i < elements.size(); i++) {
+                System.out.println(str + "," + elements.get(i).text().toString());
+            }
+        }
     }
 
     public static void main(String[] args) throws Exception {
         EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
+        estateProjectInfo.getYouCaiYunIndustryInfo();
+
+//        estateProjectInfo.getAoyuanRealEstate();
+//        estateProjectInfo.getChinaJinMao();
 //        estateProjectInfo.getCqhyrc();
-        estateProjectInfo.getAoyuanRealEstate();
+//        estateProjectInfo.getAoyuanRealEstate();
 //        estateProjectInfo.getXsjt();
 //        estateProjectInfo.getKwgGroupHoldings();
 //        estateProjectInfo.getCrccreInfo();

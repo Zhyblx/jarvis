@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/operations/PhantomJs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AddressInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjs/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/phantomjs/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations/PhantomJs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/PhantomJs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AddressInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AddressInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +119,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="应用程序.EstateProjectInfo" />
       <item itemvalue="应用程序.AddressInfo" />
+      <item itemvalue="应用程序.EstateProjectInfo" />
       <item itemvalue="应用程序.LucnenApplication" />
       <item itemvalue="应用程序.PhantomJs" />
       <item itemvalue="应用程序.Test" />
@@ -128,8 +128,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.EstateProjectInfo" />
-        <item itemvalue="应用程序.AddressInfo" />
         <item itemvalue="应用程序.PhantomJs" />
+        <item itemvalue="应用程序.AddressInfo" />
         <item itemvalue="应用程序.Test" />
         <item itemvalue="应用程序.LucnenApplication" />
       </list>

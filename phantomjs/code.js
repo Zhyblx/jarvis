@@ -13,6 +13,6 @@ page.open(url, function (status) {
               //page.render("test1.png");  //截图
               console.log(page.content);
               phantom.exit();
-          }, 5000);
+          }, 10000);
     }
 });

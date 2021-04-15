@@ -51,7 +51,7 @@ public class PhantomJs {
     public static void main(String[] args) throws Exception {
         System.out.println(
                 new PhantomJs()
-                        .getHtmlJs("https://www.aoyuan.com.cn/realEstate/realEstate.aspx?strm=115001001&page=2")
+                        .getHtmlJs("http://jzsc.mohurd.gov.cn/data/project?complexname=万科")
         );
 
     }
