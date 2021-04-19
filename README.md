@@ -23,6 +23,7 @@
 |AmsUserPermissionsList|main(String[] args)|--|--|获取AMS权限管理系统的数据结构|
 |EstateProjectInfo|main(String[] args)|--|--|房地产项目信息|
 |AddressInfo|getAddressInfo(String name) |String name:地址名称|String|地址库解析|
+|BusinessNameMatching|main(String[] args)|--|--|文本相似度计算应用|
 ----------------------------------------------------------------------------------------------------------------
 
 #### -desktop(桌面)-
@@ -48,10 +49,13 @@
 |RARExtractor|getUntieRARFile(File sourceRar, File destDir)|sourceRar:rar文件所在路径<br> destDir:指定的解压路径|static void|实现rar压缩文件的解压|
 |CreateDataBase|setCreateDataBase(String sql)|sql:SQL语句|void|Sqlite文件型数据库的使用参考:创建数据库|
 |InsertData|setInsertData(String strSql) |sql:SQL语句|void|Sqlite文件型数据库的使用参考:向数据库中插入数据|
-|ReadExcel|setExcelCell(File file,String sheetName,int intCell)|file:Excel文件路径 <br> sheetName:Excel-Sheet名称 <br> intCell:Excel单元格 |String|读取Excel列数据|
+|ReadExcel|setExcelCell(File file,String sheetName,int intCell)|file:Excel文件路径 <br> sheetName:Excel-Sheet名称 <br> intCell:Excel单元格 |List|读取Excel列数据|
 |OCR|getHighPrecisionParsingData(String picturePath)|picturePath:图片地址|List<String>|调用OCR高精度解析方法|
 |OCR|getOrdinaryParsingData(String picturePath)|picturePath:图片地址|List<String>|调用OCR普通解析方法|
 |PhantomJs|getHtmlJs(String url)|String url:网址|String|PhantomJS是一个可编程的无头浏览器；<br>使用场景：<br>1.页面自动化测试;<br>2.网页监控;<br>3.网络爬虫|
+|ZhangTextSimilarity|getBaiDuTextSimilarity(String text1,String text2)|text1:文本1,text2:文本2|String|(推荐)百度文本相似度计算|
+|ZhangTextSimilarity|getWordTextSimilarity(String text1,String text2)|text1:文本1,text2:文本2|Double|word文本相似度计算(开源项目计算精度不高)|
+|TemporaryFiles|stLog(Object msg)|msg:内容|void|存储临时文件内容|
 
 * 查看爬虫robots协议的方法是"在网站URL后面输入：robots.txt "；例如：https://www.jinke.com/robots.txt
 ----------------------------------------------------------------------------------------------------------------

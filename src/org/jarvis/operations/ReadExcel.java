@@ -6,6 +6,8 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 类：ReadExcel
@@ -13,8 +15,8 @@ import java.io.File;
  */
 public class ReadExcel {
 
-    public String setExcelCell(File file,String sheetName,int intCell) throws Exception{
-        String strCell="";
+    public List<String> setExcelCell(File file, String sheetName, int intCell) throws Exception{
+        List<String> list = new ArrayList<String>();
 
         XSSFWorkbook xssfWorkbook=new XSSFWorkbook(file);
         XSSFSheet xssfSheet=xssfWorkbook.getSheet(sheetName);
@@ -22,12 +24,13 @@ public class ReadExcel {
         for(int i=0;i<rowsNum;i++){
             XSSFRow xssfRow=xssfSheet.getRow(i);
             XSSFCell xssfCell=xssfRow.getCell(intCell);
-            strCell=strCell+xssfCell.toString()+"\r\n";
+            list.add(xssfCell.toString());
+//            strCell=strCell+xssfCell.toString()+"\r\n";
 
         }
         xssfWorkbook.close();
 
-        return strCell;
+        return list;
 
     }
 

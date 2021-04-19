@@ -1,12 +1,13 @@
 package org.jarvis.organization.wzgroup;
 
 import org.jarvis.operations.PhantomJs;
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.Connection;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import java.io.File;
+import java.io.*;
 
 //房地产项目信息
 public class EstateProjectInfo {
@@ -540,10 +541,37 @@ public class EstateProjectInfo {
         }
     }
 
+    /**
+     * 东财财务表公司简称
+     * @throws Exception
+     */
+
+    public void getNewFinanceAnalysis() throws Exception {
+        File file=new File("/Users/zhangyibin/Downloads/财务数据/东财财务表公司简称0416.json");
+        InputStream inputStream=new FileInputStream(file);
+        InputStreamReader inputStreamReader=new InputStreamReader(inputStream);
+        BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
+        String strJson="";
+        String strJsonLine="";
+        while((strJson=bufferedReader.readLine())!=null){
+            strJsonLine=strJsonLine+strJson;
+
+        }
+        bufferedReader.close();
+        inputStreamReader.close();
+        inputStream.close();
+
+        JSONObject jsonObject=new JSONObject(strJsonLine);
+        System.out.println(jsonObject.toString());
+
+    }
+
     public static void main(String[] args) throws Exception {
         EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
-        estateProjectInfo.getYouCaiYunIndustryInfo();
+        estateProjectInfo.getNewFinanceAnalysis();
 
+
+//        estateProjectInfo.getYouCaiYunIndustryInfo();
 //        estateProjectInfo.getAoyuanRealEstate();
 //        estateProjectInfo.getChinaJinMao();
 //        estateProjectInfo.getCqhyrc();
