@@ -2,8 +2,8 @@
 
 ## 简介：
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;我的工作助理--------jarvis <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;把重复的劳动时间释放出来，让它变得更有意义。
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;明霄同学的工作助理--------jarvis <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;把重复的劳动时间释放出来，让它变得更有意义。
 
 ----
 ## 概览(package)：

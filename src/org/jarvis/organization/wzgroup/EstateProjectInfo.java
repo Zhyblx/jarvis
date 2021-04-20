@@ -1,6 +1,7 @@
 package org.jarvis.organization.wzgroup;
 
 import org.jarvis.operations.PhantomJs;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.Connection;
@@ -542,12 +543,12 @@ public class EstateProjectInfo {
     }
 
     /**
-     * 东财财务表公司简称
+     *
      * @throws Exception
      */
 
     public void getNewFinanceAnalysis() throws Exception {
-        File file=new File("/Users/zhangyibin/Downloads/财务数据/东财财务表公司简称0416.json");
+        File file=new File("/Users/zhangyibin/Downloads/long_text_2021-04-19-18-25-39.txt");
         InputStream inputStream=new FileInputStream(file);
         InputStreamReader inputStreamReader=new InputStreamReader(inputStream);
         BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
@@ -562,7 +563,52 @@ public class EstateProjectInfo {
         inputStream.close();
 
         JSONObject jsonObject=new JSONObject(strJsonLine);
-        System.out.println(jsonObject.toString());
+        JSONObject data=jsonObject.getJSONObject("data");
+        JSONObject result=data.getJSONObject("result");
+        JSONArray items=result.getJSONArray("items");
+        System.out.println("name"+","+"type"+","+"id"+","+"alias"+","+"logo"+","+
+                "capitalActl_amomon"+","+"capitalActl_paymet"+","+"capitalActl_time"+","+"capitalActl_percent"+","+
+                "capital_amomon"+","+"capital_paymet"+","+"capital_time"+","+"capital_percent");
+        for(int i=0;i<items.length();i++){
+            //System.out.println(items.get(i).toString());
+            String dataArray=items.get(i).toString();
+            JSONObject capital=new JSONObject(dataArray);
+            String name=capital.get("name").toString();
+            String type=capital.get("type").toString();
+            String id=capital.get("id").toString();
+            String alias=capital.get("alias").toString();
+            String logo=capital.get("logo").toString();
+
+            System.out.print(name+","+type+","+id+","+alias+","+logo+",");
+
+            JSONArray capitalActl=capital.getJSONArray("capitalActl");
+            for(int a=0;a<capitalActl.length();a++){
+               String dataCapitalActl= capitalActl.get(a).toString();
+               JSONObject jscapitalActl=new JSONObject(dataCapitalActl);
+               //System.out.println(jscapitalActl.get("amomon").toString());
+                String amomon=jscapitalActl.get("amomon").toString();
+                String paymet=jscapitalActl.get("paymet").toString();
+                String time=jscapitalActl.get("time").toString();
+                String percent1=jscapitalActl.get("percent").toString();
+                System.out.print(amomon+","+paymet+","+time+","+percent1+",");
+
+            }
+
+            JSONArray capitalArray=capital.getJSONArray("capital");
+            for(int b=0;b<capitalArray.length();b++){
+                String dataCapitalArray= capitalArray.get(b).toString();
+                JSONObject jcapitalArray=new JSONObject(dataCapitalArray);
+                String amomon=jcapitalArray.get("amomon").toString();
+                String paymet=jcapitalArray.get("paymet").toString();
+                String time=jcapitalArray.get("time").toString();
+                String percent=jcapitalArray.get("percent").toString();
+                System.out.println(amomon+","+paymet+","+time+","+percent+",");
+
+            }
+
+
+        }
+
 
     }
 
