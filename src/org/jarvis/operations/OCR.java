@@ -17,13 +17,14 @@ public class OCR {
 
     /**
      * 调用OCR高精度解析方法
+     *
      * @param picturePath
      * @return
      */
     public List<String> getHighPrecisionParsingData(String picturePath) {
         // 初始化一个AipOcr
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
-        List<String> list=new ArrayList<String>();
+        List<String> list = new ArrayList<String>();
 
         // 可选：设置网络连接参数
         //client.setConnectionTimeoutInMillis(2000);
@@ -46,9 +47,9 @@ public class OCR {
 
         // 调用接口
         JSONObject res = client.basicAccurateGeneral(picturePath, options);
-        JSONArray result=res.getJSONArray("words_result");
-        for(int i=0;i<result.length();i++){
-            JSONObject data=result.getJSONObject(i);
+        JSONArray result = res.getJSONArray("words_result");
+        for (int i = 0; i < result.length(); i++) {
+            JSONObject data = result.getJSONObject(i);
             list.add(data.get("words").toString());
 
         }
@@ -58,13 +59,14 @@ public class OCR {
 
     /**
      * 调用OCR普通解析方法
+     *
      * @param picturePath
      * @return
      */
     public List<String> getOrdinaryParsingData(String picturePath) {
         // 初始化一个AipOcr
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
-        List<String> list=new ArrayList<String>();
+        List<String> list = new ArrayList<String>();
 
         // 传入可选参数调用接口
         HashMap<String, String> options = new HashMap<String, String>();
@@ -75,9 +77,9 @@ public class OCR {
 
         // 调用接口
         JSONObject res = client.basicGeneral(picturePath, options);
-        JSONArray result=res.getJSONArray("words_result");
-        for(int i=0;i<result.length();i++){
-            JSONObject data=result.getJSONObject(i);
+        JSONArray result = res.getJSONArray("words_result");
+        for (int i = 0; i < result.length(); i++) {
+            JSONObject data = result.getJSONObject(i);
             list.add(data.get("words").toString());
 
         }
@@ -86,15 +88,15 @@ public class OCR {
     }
 
 
-    public static void main(String[] args) throws  Exception{
-        List<String> list=new ArrayList<String>() ;
-        OCR ocr=new OCR();
-        String[] imgAddress = {"1.png", "2.png", "3.png", "4.png", "5.png"};
-        for(String str:imgAddress){
-            list.addAll(ocr.getHighPrecisionParsingData("/Users/zhangyibin/Downloads/"+str));
-            Iterator<String> iterator=list.iterator();
-            while(iterator.hasNext()){
-                String imgStr=iterator.next();
+    public static void main(String[] args) throws Exception {
+        List<String> list = new ArrayList<String>();
+        OCR ocr = new OCR();
+        String[] imgAddress = {"1.png", "2.png"};
+        for (String str : imgAddress) {
+            list.addAll(ocr.getHighPrecisionParsingData("/Users/zhangyibin/Downloads/img/" + str));
+            Iterator<String> iterator = list.iterator();
+            while (iterator.hasNext()) {
+                String imgStr = iterator.next();
                 System.out.println(imgStr);
 
             }

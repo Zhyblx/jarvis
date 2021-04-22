@@ -15,6 +15,7 @@ import java.util.ArrayList;
  */
 public class BusinessNameMatching {
 
+    /*
     public static void main(String[] args) throws Exception {
         File file = new File("/Users/zhangyibin/Downloads/财务数据/财务表公司全简称对应.xlsx");
         ReadExcel readExcel = new ReadExcel();
@@ -39,13 +40,14 @@ public class BusinessNameMatching {
                     temporaryFiles.stLog(text1 + "," + text2 + "," + score);
 
                 }
-                //Thread.sleep(1000);// 延迟1秒
+                Thread.sleep(1000);// 延迟1秒
 
             }
         }
     }
+     */
 
-    /*
+
     public static void main(String[] args) throws Exception {
         File file = new File("/Users/zhangyibin/Downloads/财务数据/财务表公司全简称对应.xlsx");
         ReadExcel readExcel = new ReadExcel();
@@ -68,11 +70,11 @@ public class BusinessNameMatching {
                     temporaryFiles.stLog(text1 + "," + text2 + "," + score);
 
                 }
-                //Thread.sleep(1000);// 延迟1秒
+                Thread.sleep(1000);// 延迟1秒
 
             }
         }
     }
-    */
+
 
 }

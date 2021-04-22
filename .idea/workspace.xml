@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="">
+    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/ThreeRedLines.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations/OCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/OCR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AddressInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AddressInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +54,20 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="应用程序.EstateProjectInfo">
+  <component name="RunManager" selected="应用程序.ThreeRedLines">
+    <configuration name="AddressInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AddressInfo" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BusinessNameMatching" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.BusinessNameMatching" />
       <module name="jarvis" />
@@ -77,8 +94,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TemporaryFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.TemporaryFiles" />
+    <configuration name="OCR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.OCR" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
@@ -90,25 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextSimilarity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.TextSimilarity" />
+    <configuration name="ThreeRedLines" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.ThreeRedLines" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jarvis.operations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZhangTextSimilarity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.ZhangTextSimilarity" />
-      <module name="jarvis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jarvis.operations.*" />
+          <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,17 +123,17 @@
     <list>
       <item itemvalue="应用程序.BusinessNameMatching" />
       <item itemvalue="应用程序.EstateProjectInfo" />
-      <item itemvalue="应用程序.TemporaryFiles" />
-      <item itemvalue="应用程序.TextSimilarity" />
-      <item itemvalue="应用程序.ZhangTextSimilarity" />
+      <item itemvalue="应用程序.AddressInfo" />
+      <item itemvalue="应用程序.OCR" />
+      <item itemvalue="应用程序.ThreeRedLines" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.EstateProjectInfo" />
+        <item itemvalue="应用程序.ThreeRedLines" />
         <item itemvalue="应用程序.BusinessNameMatching" />
-        <item itemvalue="应用程序.ZhangTextSimilarity" />
-        <item itemvalue="应用程序.TemporaryFiles" />
-        <item itemvalue="应用程序.TextSimilarity" />
+        <item itemvalue="应用程序.EstateProjectInfo" />
+        <item itemvalue="应用程序.OCR" />
+        <item itemvalue="应用程序.AddressInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -158,5 +162,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -94,16 +94,16 @@ public class EstateProjectInfo {
     public void getFinanceTableInfo() throws Exception {
 
         String[] strAddress1 = {
-                "/Users/zhangyibin/Downloads/按报告期.html",
-                "/Users/zhangyibin/Downloads/按年度.html",
-                "/Users/zhangyibin/Downloads/按单季度.html"
+                "/Users/zhangyibin/Downloads/广州富力地产股份有限公司/HTML/富力地产财务分析-年度.html",
+                "/Users/zhangyibin/Downloads/广州富力地产股份有限公司/HTML/富力地产财务分析-年度.html",
+                "/Users/zhangyibin/Downloads/广州富力地产股份有限公司/HTML/富力地产财务分析-年度.html"
         };
 
         for (int i = 0; i < strAddress1.length; i++) {
             File file_3 =
                     new File(strAddress1[i]);
             Document document_3 = Jsoup.parse(file_3, "UTF-8", "");
-            Elements elements_3 = document_3.select("[id=F10MainTargetDiv]");
+            Elements elements_3 = document_3.select("[id=zyzbContent]");
             Elements elements1_3 = elements_3.select("tbody").select("tr");
             if (i == 0) {
                 System.out.println("按报告期");
@@ -543,7 +543,7 @@ public class EstateProjectInfo {
     }
 
     /**
-     *
+     * 广州富力股权数据解析
      * @throws Exception
      */
 
@@ -612,11 +612,24 @@ public class EstateProjectInfo {
 
     }
 
+    /*
+    分类	    红线	计算逻辑
+    A(A股)	1	剔除预收款后的资产负债率
+	        2	(负债合计 * 有息负债率 / 100 - 货币资金) / 所有者权益合计
+	        3	货币资金 / (短期借款 + 一年内到期非流动负债)
+    H(港股)	1	资产负债率
+	        2	(带息负债 - 流动负债合计 * (货币资金 / 流动负债合计)) / 权益合计
+	        3	流动负债合计 * (货币资金/流动负债合计) / 短期借债
+     *
+     */
+
     public static void main(String[] args) throws Exception {
         EstateProjectInfo estateProjectInfo = new EstateProjectInfo();
-        estateProjectInfo.getNewFinanceAnalysis();
+        //广州富力地产股份有限公司
+        estateProjectInfo.getFinanceTableInfo();
 
 
+//        estateProjectInfo.getNewFinanceAnalysis();
 //        estateProjectInfo.getYouCaiYunIndustryInfo();
 //        estateProjectInfo.getAoyuanRealEstate();
 //        estateProjectInfo.getChinaJinMao();
