@@ -57,6 +57,7 @@
 |ZhangTextSimilarity|getBaiDuTextSimilarity(String text1,String text2)|text1:文本1,text2:文本2|String|(推荐)百度文本相似度计算|
 |ZhangTextSimilarity|getWordTextSimilarity(String text1,String text2)|text1:文本1,text2:文本2|Double|word文本相似度计算(开源项目计算精度不高)|
 |TemporaryFiles|stLog(Object msg)|msg:内容|void|存储临时文件内容|
+|TextCharacterSearch|getTextCharacterSearch(String word, String text)|word:词汇<br> text:文本|String|字符与文本间的匹配关系|
 
 * 查看爬虫robots协议的方法是"在网站URL后面输入：robots.txt "；例如：https://www.jinke.com/robots.txt
 ----------------------------------------------------------------------------------------------------------------

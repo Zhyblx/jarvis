@@ -17,14 +17,14 @@ public class BusinessNameMatching {
 
     /*
     public static void main(String[] args) throws Exception {
-        File file = new File("/Users/zhangyibin/Downloads/财务数据/财务表公司全简称对应.xlsx");
+        File file = new File("/Users/zhangyibin/Downloads/工作簿1.xlsx");
         ReadExcel readExcel = new ReadExcel();
         TemporaryFiles temporaryFiles=new TemporaryFiles();
         List<String> list1 = new ArrayList<String>();
         list1.addAll(readExcel.setExcelCell(file, "Sheet1", 0));
 
         List<String> list2 = new ArrayList<String>();
-        list2.addAll(readExcel.setExcelCell(file, "Sheet2", 1));
+        list2.addAll(readExcel.setExcelCell(file, "Sheet2", 0));
 //        System.out.println(list1);
 //        System.out.println(list2);
 
@@ -45,18 +45,18 @@ public class BusinessNameMatching {
             }
         }
     }
-     */
 
+    */
 
     public static void main(String[] args) throws Exception {
-        File file = new File("/Users/zhangyibin/Downloads/财务数据/财务表公司全简称对应.xlsx");
+        File file = new File("/Users/zhangyibin/Downloads/工作簿1.xlsx");
         ReadExcel readExcel = new ReadExcel();
         TemporaryFiles temporaryFiles=new TemporaryFiles();
         List<String> list1 = new ArrayList<String>();
-        list1.addAll(readExcel.setExcelCell(file, "Sheet1", 0));
+        list1.addAll(readExcel.setExcelCell(file, "销售公司", 0));
 
         List<String> list2 = new ArrayList<String>();
-        list2.addAll(readExcel.setExcelCell(file, "Sheet2", 1));
+        list2.addAll(readExcel.setExcelCell(file, "三条红线公司", 0));
 //        System.out.println(list1);
 //        System.out.println(list2);
 
@@ -66,11 +66,11 @@ public class BusinessNameMatching {
                 String text2 = list2.get(j).toString();
                 double score = new ZhangTextSimilarity().getWordTextSimilarity(text1, text2);
                 System.out.println(text1 + "," + text2 + "," + score);
-                if(score>=0.9){
+                if(score>=0.8){
                     temporaryFiles.stLog(text1 + "," + text2 + "," + score);
 
                 }
-                Thread.sleep(1000);// 延迟1秒
+                //Thread.sleep(200);// 延迟200毫秒
 
             }
         }

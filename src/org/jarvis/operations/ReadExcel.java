@@ -23,8 +23,20 @@ public class ReadExcel {
         int rowsNum=xssfSheet.getPhysicalNumberOfRows();
         for(int i=0;i<rowsNum;i++){
             XSSFRow xssfRow=xssfSheet.getRow(i);
-            XSSFCell xssfCell=xssfRow.getCell(intCell);
-            list.add(xssfCell.toString());
+            XSSFCell xssfCell=null;
+            String strData="";
+            try {
+                xssfCell=xssfRow.getCell(intCell);
+                strData=xssfCell.toString();
+                if(strData.equals("")){
+                    break;
+                }else {
+                    list.add(strData);
+                }
+
+            }catch (Exception e){
+
+            }
 //            strCell=strCell+xssfCell.toString()+"\r\n";
 
         }

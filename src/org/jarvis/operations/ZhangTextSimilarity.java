@@ -54,7 +54,7 @@ public class ZhangTextSimilarity {
 
     public static void main(String[] args) throws Exception {
         //"score": 0.773647,
-//        System.out.println(new ZhangTextSimilarity().getBaiDuTextSimilarity("万科企业", "万科企业股份有限公司"));
+        System.out.println(new ZhangTextSimilarity().getWordTextSimilarity("世茂集团控股有限公司(香港)", "上海世茂股份有限公司"));
 
 
     }
