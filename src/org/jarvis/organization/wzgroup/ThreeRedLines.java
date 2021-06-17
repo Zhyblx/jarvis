@@ -27,7 +27,7 @@ import java.util.Map;
 
 /*
  * 国内上市：http://stockpage.10jqka.com.cn/000656/
- * 香港上市：http://stockpage.10jqka.com.cn/HK2777/
+ * 香港上市：http://stockpage.10jqka.com.cn/HK01895/
  */
 
 public class ThreeRedLines {
@@ -68,6 +68,7 @@ public class ThreeRedLines {
      * @param yearColumn 年份列
      * @return
      * @throws Exception
+     * @atuhor 明霄
      */
     private Map<String, String> ReadExcel(String path, int yearColumn) throws Exception {
         Map<String, String> map = new LinkedHashMap<String, String>();
@@ -96,6 +97,7 @@ public class ThreeRedLines {
      * 负债合计
      *
      * @return
+     * @author 明霄
      */
     private Double getTotalLiabilities() throws Exception {
         Map<String, String> outMap = new LinkedHashMap<String, String>();
@@ -112,6 +114,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
     private Double getPrepaymentDepositsAndOtherReceivables() throws Exception {
         Map<String, String> outMap = new LinkedHashMap<String, String>();
@@ -129,6 +132,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
 
     private Double getTotalAssets() throws Exception {
@@ -146,6 +150,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
 
     private Double getTotalLiabilitiesAndShareholdersEquity() throws Exception {
@@ -164,6 +169,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
     private Double getMoneyFunds() throws Exception {
         Map<String, String> outMap = new LinkedHashMap<String, String>();
@@ -180,6 +186,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
 
     private Double getTotalEquity() throws Exception {
@@ -197,6 +204,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
 
     private Double getShort_termLoan() throws Exception {
@@ -214,6 +222,7 @@ public class ThreeRedLines {
      *
      * @return
      * @throws Exception
+     * @author 明霄
      */
     private Double getCurrentLiabilities() throws Exception {
         Map<String, String> outMap = new LinkedHashMap<String, String>();
@@ -227,8 +236,10 @@ public class ThreeRedLines {
 
     /**
      * 长期借款
+     *
      * @return
      * @throws Exception
+     * @author 明霄
      */
 
     private Double getLongTermLoan() throws Exception {
@@ -240,15 +251,14 @@ public class ThreeRedLines {
         return longTermLoan;
 
 
-
     }
-
 
 
     /**
      * 计算三条红线
      *
      * @throws Exception
+     * @author 明霄
      */
 
     public void getThreeRedLines() throws Exception {
@@ -256,7 +266,8 @@ public class ThreeRedLines {
         System.out.println("---明霄网上的计算公式：-----");
         //红线一指标：剔除预收款后的资产负债率=(总负债-预收)/(总资产-预收)
         System.out.println("剔除预收款后的资产负债率:"
-                + ((this.getTotalLiabilities() - this.getPrepaymentDepositsAndOtherReceivables()) / (this.getTotalAssets() - this.getPrepaymentDepositsAndOtherReceivables())));
+                + ((this.getTotalLiabilities() - this.getPrepaymentDepositsAndOtherReceivables()) / (this.getTotalAssets()
+                - this.getPrepaymentDepositsAndOtherReceivables())));
 
         System.out.println("---------");
 
@@ -284,26 +295,25 @@ public class ThreeRedLines {
 
 
     public static void main(String[] args) throws Exception {
-        /**
+        /*
          * 万科企业：HK2202
          * 富力地产：HK2777
          * 中国恒大：HK3333
          *
          */
 
-        String[] address = new String[]{"HK2777_debt_report.xls", "HK3333_debt_report.xls", "HK2202_debt_report.xls"};
+        String[] address = new String[]{"HK1895_debt_report.xls"};
 
         for (String str : address) {
             System.out.println("-----" + str + "-----");
             ThreeRedLines threeRedLines =
-                    new ThreeRedLines("/Users/zhangyibin/Downloads/三条红线计算/"+str,
+                    new ThreeRedLines("/Users/zhangyibin/Downloads/" + str,
                             1);
             threeRedLines.getThreeRedLines();
             System.out.println("");
 
 
         }
-
 
 //        BigDecimal db = new BigDecimal(threeRedLines.getCurrentLiabilities());
 //        String ii = db.toPlainString();

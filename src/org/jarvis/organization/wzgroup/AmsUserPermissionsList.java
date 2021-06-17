@@ -22,6 +22,7 @@ public class AmsUserPermissionsList {
      *
      * @return
      * @throws Exception
+     * @atuhor 明霄
      */
     public Map<String, String> getFindTreeRoles() throws Exception {
         Map<String, String> map = new HashMap<String, String>();
@@ -54,8 +55,16 @@ public class AmsUserPermissionsList {
         return map;
     }
 
+    /**
+     * 权限列表
+     *
+     * @param roleId
+     * @return
+     * @throws Exception
+     * @atuhor 明霄
+     */
     public String getUserPermissions(String roleId) throws Exception {
-        /**
+        /*
          * 权限列表
          */
         Connection connectionPermissions = Jsoup
@@ -84,7 +93,7 @@ public class AmsUserPermissionsList {
         }
 //        System.out.println(dataNamePermissions);
 
-        /**
+        /*
          * 用户列表
          */
         Connection connectionUser = Jsoup
@@ -120,11 +129,11 @@ public class AmsUserPermissionsList {
 
     public static void main(String[] args) throws Exception {
         AmsUserPermissionsList amsUserPermissionsList = new AmsUserPermissionsList();
-        Map<String,String> map=amsUserPermissionsList.getFindTreeRoles();
-        Iterator<String> iterator=map.keySet().iterator();
-        while(iterator.hasNext()){
-            String strKey=iterator.next();
-            System.out.println(strKey+"|"+map.get(strKey)+"|"+
+        Map<String, String> map = amsUserPermissionsList.getFindTreeRoles();
+        Iterator<String> iterator = map.keySet().iterator();
+        while (iterator.hasNext()) {
+            String strKey = iterator.next();
+            System.out.println(strKey + "|" + map.get(strKey) + "|" +
                     amsUserPermissionsList.getUserPermissions(strKey));
 
         }

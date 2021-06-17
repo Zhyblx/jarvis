@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/operations/TextCharacterSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations/ReadExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/ReadExcel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations/ZhangTextSimilarity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/ZhangTextSimilarity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_0.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_0.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_0.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_0.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_0.si" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_0.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_1.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_1.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_1.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_1.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_1.si" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_1.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/SearchIndex/segments_1" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/segments_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations/TextCharacterSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/TextCharacterSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/ThreeRedLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/ThreeRedLines.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +57,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
-  <component name="RunManager" selected="应用程序.BusinessNameMatching">
-    <configuration name="BusinessNameMatching" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.BusinessNameMatching" />
+  <component name="RunManager" selected="应用程序.LucnenApplication">
+    <configuration name="AmsUserPermissionsList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AmsUserPermissionsList" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
@@ -67,12 +73,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstateProjectInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.EstateProjectInfo" />
+    <configuration name="Createindex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.desktop.searchapp.Createindex" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
+          <option name="PATTERN" value="org.jarvis.desktop.searchapp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,8 +86,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextCharacterSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.TextCharacterSearch" />
+    <configuration name="LucnenApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.desktop.searchapp.LucnenApplication" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.desktop.searchapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhantomJs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.PhantomJs" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
@@ -106,33 +125,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZhangTextSimilarity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.ZhangTextSimilarity" />
-      <module name="jarvis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jarvis.operations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="应用程序.BusinessNameMatching" />
-      <item itemvalue="应用程序.EstateProjectInfo" />
+      <item itemvalue="应用程序.AmsUserPermissionsList" />
+      <item itemvalue="应用程序.Createindex" />
+      <item itemvalue="应用程序.LucnenApplication" />
       <item itemvalue="应用程序.ThreeRedLines" />
-      <item itemvalue="应用程序.ZhangTextSimilarity" />
-      <item itemvalue="应用程序.TextCharacterSearch" />
+      <item itemvalue="应用程序.PhantomJs" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.BusinessNameMatching" />
-        <item itemvalue="应用程序.TextCharacterSearch" />
-        <item itemvalue="应用程序.ZhangTextSimilarity" />
+        <item itemvalue="应用程序.LucnenApplication" />
+        <item itemvalue="应用程序.AmsUserPermissionsList" />
+        <item itemvalue="应用程序.PhantomJs" />
+        <item itemvalue="应用程序.Createindex" />
         <item itemvalue="应用程序.ThreeRedLines" />
-        <item itemvalue="应用程序.EstateProjectInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -171,5 +177,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
