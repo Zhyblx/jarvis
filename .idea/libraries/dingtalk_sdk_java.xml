@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="dingtalk-sdk-java">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/dingtalk-sdk-java" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/dingtalk-sdk-java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/dingtalk-sdk-java" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/dingtalk-sdk-java" recursive="false" type="SOURCES" />
+  </library>
+</component>

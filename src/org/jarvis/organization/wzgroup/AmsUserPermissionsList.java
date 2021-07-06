@@ -6,6 +6,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
+import java.io.IOException;
 import java.util.*;
 
 public class AmsUserPermissionsList {
@@ -18,17 +19,15 @@ public class AmsUserPermissionsList {
     private String user = "s%3ATzovqqGzPS-B5P9QCMIewrsaj3uRHzTw.maYtzX02AtU1LGDiq2VTAbBK4JAY1luMVIoDgyq25HI";
 
     /**
-     * 获取权限结构列表
+     * 获取页面文档
      *
-     * @return
-     * @throws Exception
-     * @atuhor 明霄
+     * @param url
+     * @return document(Html对象文件)
+     * @author 明霄
      */
-    public Map<String, String> getFindTreeRoles() throws Exception {
-        Map<String, String> map = new HashMap<String, String>();
-
+    private Document getDocument(String url) {
         Connection connection = Jsoup
-                .connect("https://ams.qjdchina.com/forwardGet?url=/front/role/findTreeRoles");
+                .connect(url);
         connection.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) " +
                 "AppleWebKit/537.36 (KHTML, like Gecko) " +
                 "Chrome/81.0.4044.122 Safari/537.36");
@@ -40,8 +39,26 @@ public class AmsUserPermissionsList {
         connection.cookie("JSESSIONID", this.JSESSIONID);
         connection.cookie("SESSION", this.SESSION);
         connection.cookie("user", this.user);
+        Document document = null;
+        try {
+            document = connection.get();
+        } catch (IOException e) {
+            e.printStackTrace();
 
-        Document document = connection.get();
+        }
+        return document;
+
+    }
+
+    /**
+     * 获取权限结构列表
+     *
+     * @return map(角色id - > 角色名称)
+     * @atuhor 明霄
+     */
+    public Map<String, String> getFindTreeRoles() {
+        Map<String, String> map = new HashMap<String, String>();
+        Document document = this.getDocument("https://ams.qjdchina.com/forwardGet?url=/front/role/findTreeRoles");
         String strJson = document.text();
         JSONObject jsonObject = new JSONObject(strJson);
         String data = String.valueOf(jsonObject.get("data"));
@@ -53,35 +70,21 @@ public class AmsUserPermissionsList {
 
         }
         return map;
+
     }
 
     /**
-     * 权限列表
+     * 用户权限列表
      *
-     * @param roleId
-     * @return
-     * @throws Exception
-     * @atuhor 明霄
+     * @param roleId(角色ID)
+     * @return 权限与用户对应关系
+     * @author 明霄
      */
-    public String getUserPermissions(String roleId) throws Exception {
+    public String getUserPermissions(String roleId) {
         /*
          * 权限列表
          */
-        Connection connectionPermissions = Jsoup
-                .connect("https://ams.qjdchina.com/forwardGet?url=/front/role/getAmsPermissions&roleId=" + roleId);
-        connectionPermissions.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) " +
-                "AppleWebKit/537.36 (KHTML, like Gecko) " +
-                "Chrome/81.0.4044.122 Safari/537.36");
-        connectionPermissions.ignoreContentType(true);
-        connectionPermissions.timeout(20000);
-        connectionPermissions.cookie("UM_distinctid", this.UM_distinctid);
-        connectionPermissions.cookie("Hm_lvt_27d5944aabe587561b8deef6b586aef4", this.Hm_lvt_27d5944aabe587561b8deef6b586aef4);
-        connectionPermissions.cookie("admin_auth_ticket", this.admin_auth_ticket);
-        connectionPermissions.cookie("JSESSIONID", this.JSESSIONID);
-        connectionPermissions.cookie("SESSION", this.SESSION);
-        connectionPermissions.cookie("user", this.user);
-
-        Document documentPermissions = connectionPermissions.get();
+        Document documentPermissions = this.getDocument("https://ams.qjdchina.com/forwardGet?url=/front/role/getAmsPermissions&roleId=" + roleId);
         String strJsonPermissions = documentPermissions.text();
         JSONObject jsonObjectPermissions = new JSONObject(strJsonPermissions);
         JSONArray jsonArrayPermissions = jsonObjectPermissions.getJSONArray("data");
@@ -91,26 +94,11 @@ public class AmsUserPermissionsList {
             dataNamePermissions = dataNamePermissions + String.valueOf(jsonObject1Permissions.get("name")) + ";";
 
         }
-//        System.out.println(dataNamePermissions);
 
         /*
          * 用户列表
          */
-        Connection connectionUser = Jsoup
-                .connect("https://ams.qjdchina.com/forwardGet?url=/front/user/getUsersByRoleId&roleId=" + roleId);
-        connectionUser.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) " +
-                "AppleWebKit/537.36 (KHTML, like Gecko) " +
-                "Chrome/81.0.4044.122 Safari/537.36");
-        connectionUser.ignoreContentType(true);
-        connectionUser.timeout(20000);
-        connectionUser.cookie("UM_distinctid", this.UM_distinctid);
-        connectionUser.cookie("Hm_lvt_27d5944aabe587561b8deef6b586aef4", this.Hm_lvt_27d5944aabe587561b8deef6b586aef4);
-        connectionUser.cookie("admin_auth_ticket", this.admin_auth_ticket);
-        connectionUser.cookie("JSESSIONID", this.JSESSIONID);
-        connectionUser.cookie("SESSION", this.SESSION);
-        connectionUser.cookie("user", this.user);
-
-        Document documentUser = connectionUser.get();
+        Document documentUser = this.getDocument("https://ams.qjdchina.com/forwardGet?url=/front/user/getUsersByRoleId&roleId=" + roleId);
         String strJsonUser = documentUser.text();
         JSONObject jsonObjectUser = new JSONObject(strJsonUser);
         JSONArray jsonArrayUser = jsonObjectUser.getJSONArray("data");
@@ -120,15 +108,23 @@ public class AmsUserPermissionsList {
             dataNameUser = dataNameUser + String.valueOf(jsonObject1User.get("name")) + ";";
 
         }
-//        System.out.println(dataNameUser);
-
         return dataNamePermissions + "|" + dataNameUser;
 
     }
 
+    private AmsUserPermissionsList() {
+        //私有化构造
 
+    }
+
+    public static AmsUserPermissionsList getAmsUserPermissionsList() {
+        return new AmsUserPermissionsList();
+
+    }
+
+    // 启动数据下载
     public static void main(String[] args) throws Exception {
-        AmsUserPermissionsList amsUserPermissionsList = new AmsUserPermissionsList();
+        AmsUserPermissionsList amsUserPermissionsList = AmsUserPermissionsList.getAmsUserPermissionsList();
         Map<String, String> map = amsUserPermissionsList.getFindTreeRoles();
         Iterator<String> iterator = map.keySet().iterator();
         while (iterator.hasNext()) {
@@ -137,8 +133,5 @@ public class AmsUserPermissionsList {
                     amsUserPermissionsList.getUserPermissions(strKey));
 
         }
-
-//        System.out.println(amsUserPermissionsList.getUserPermissions("4"));
-
     }
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  * 文本相似度计算应用；
- *
+ * NLP
  */
 public class BusinessNameMatching {
 

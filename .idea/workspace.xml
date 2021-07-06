@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/dingtalk_sdk_java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/DingtalkOrganization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_0.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_0.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_0.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_0.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_0.si" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_0.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_1.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_1.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_1.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_1.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/_1.si" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/_1.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/SearchIndex/segments_1" beforeDir="false" afterPath="$PROJECT_DIR$/out/SearchIndex/segments_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/operations/TextCharacterSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/operations/TextCharacterSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jarvis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/EstateProjectInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/ThreeRedLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/ThreeRedLines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +48,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="库" />
+    <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="应用程序.LucnenApplication">
+  <component name="RunManager" selected="应用程序.DingtalkOrganization">
     <configuration name="AmsUserPermissionsList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AmsUserPermissionsList" />
       <module name="jarvis" />
@@ -79,6 +74,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.jarvis.desktop.searchapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DingtalkOrganization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.DingtalkOrganization" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,33 +120,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeRedLines" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.ThreeRedLines" />
-      <module name="jarvis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="应用程序.AmsUserPermissionsList" />
       <item itemvalue="应用程序.Createindex" />
       <item itemvalue="应用程序.LucnenApplication" />
-      <item itemvalue="应用程序.ThreeRedLines" />
       <item itemvalue="应用程序.PhantomJs" />
+      <item itemvalue="应用程序.DingtalkOrganization" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.LucnenApplication" />
+        <item itemvalue="应用程序.DingtalkOrganization" />
         <item itemvalue="应用程序.AmsUserPermissionsList" />
+        <item itemvalue="应用程序.LucnenApplication" />
         <item itemvalue="应用程序.PhantomJs" />
         <item itemvalue="应用程序.Createindex" />
-        <item itemvalue="应用程序.ThreeRedLines" />
       </list>
     </recent_temporary>
   </component>
