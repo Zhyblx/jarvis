@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/dingtalk_sdk_java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/DingtalkOrganization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jarvis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jarvis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/AmsUserPermissionsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/BusinessNameMatching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/DingtalkOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/DingtalkOrganization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +125,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.DingtalkOrganization" />
-        <item itemvalue="应用程序.AmsUserPermissionsList" />
         <item itemvalue="应用程序.LucnenApplication" />
+        <item itemvalue="应用程序.AmsUserPermissionsList" />
         <item itemvalue="应用程序.PhantomJs" />
         <item itemvalue="应用程序.Createindex" />
       </list>
