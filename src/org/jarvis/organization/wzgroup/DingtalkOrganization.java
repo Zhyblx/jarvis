@@ -151,7 +151,8 @@ public class DingtalkOrganization {
      * 发送普通消息
      *
      * @return null(返回空)
-     * @throws Exception 获取：setCid() 需要与下方的JSAPI 地址配置使用
+     * @throws Exception
+     * 获取：setCid() 需要与下方的JSAPI 地址配置使用
      *                   JSAPI：https://open-dev.dingtalk.com/apiExplorer?spm=ding_open_doc.document.0.0.748134928O6bS7#/jsapi?api=biz.chat.pickConversation
      *                   Corpid(企业ID)：dingc3322e8a45fc0cc2f2c783f7214b6d69
      *                   isConfirm：true

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/DingtalkOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jarvis/organization/wzgroup/DingtalkOrganization.java" afterDir="false" />
-    </list>
+    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="数据库更新" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -33,6 +34,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/org/jarvis/game/Sudoku.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1PS9Z6LUTG2fnv4viuTORP26Swq" />
   <component name="ProjectViewState">
@@ -49,7 +53,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="应用程序.DingtalkOrganization">
+  <component name="RunManager" selected="应用程序.Sudoku">
     <configuration name="AmsUserPermissionsList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AmsUserPermissionsList" />
       <module name="jarvis" />
@@ -76,19 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DingtalkOrganization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.DingtalkOrganization" />
-      <module name="jarvis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jarvis.organization.wzgroup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LucnenApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.desktop.searchapp.LucnenApplication" />
       <module name="jarvis" />
@@ -102,12 +93,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhantomJs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.PhantomJs" />
+    <configuration name="SensibleGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.game.SensibleGame" />
       <module name="jarvis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jarvis.operations.*" />
+          <option name="PATTERN" value="org.jarvis.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sudoku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.game.Sudoku" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,15 +123,15 @@
       <item itemvalue="应用程序.AmsUserPermissionsList" />
       <item itemvalue="应用程序.Createindex" />
       <item itemvalue="应用程序.LucnenApplication" />
-      <item itemvalue="应用程序.PhantomJs" />
-      <item itemvalue="应用程序.DingtalkOrganization" />
+      <item itemvalue="应用程序.Sudoku" />
+      <item itemvalue="应用程序.SensibleGame" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.DingtalkOrganization" />
+        <item itemvalue="应用程序.Sudoku" />
+        <item itemvalue="应用程序.SensibleGame" />
         <item itemvalue="应用程序.LucnenApplication" />
         <item itemvalue="应用程序.AmsUserPermissionsList" />
-        <item itemvalue="应用程序.PhantomJs" />
         <item itemvalue="应用程序.Createindex" />
       </list>
     </recent_temporary>
@@ -144,6 +148,84 @@
       <option name="presentableId" value="Default" />
       <updated>1556013268621</updated>
     </task>
+    <task id="LOCAL-00001" summary="钉钉发送会话消息调研;">
+      <created>1630906967624</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630906967625</updated>
+    </task>
+    <task id="LOCAL-00002" summary="钉钉发送会话消息调研;">
+      <created>1630906997824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630906997824</updated>
+    </task>
+    <task id="LOCAL-00003" summary="钉钉发送会话消息调研;">
+      <created>1630907155619</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630907155619</updated>
+    </task>
+    <task id="LOCAL-00004" summary="钉钉发送会话消息调研;">
+      <created>1630990970960</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630990970960</updated>
+    </task>
+    <task id="LOCAL-00005" summary="钉钉发送会话消息调研;">
+      <created>1630991187892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991187892</updated>
+    </task>
+    <task id="LOCAL-00006" summary="钉钉发送会话消息调研;">
+      <created>1630991217814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991217814</updated>
+    </task>
+    <task id="LOCAL-00007" summary="数据库更新">
+      <created>1630991253758</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991253758</updated>
+    </task>
+    <task id="LOCAL-00008" summary="数据库更新">
+      <created>1630991392527</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991392527</updated>
+    </task>
+    <task id="LOCAL-00009" summary="数据库更新">
+      <created>1630991438411</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991438411</updated>
+    </task>
+    <task id="LOCAL-00010" summary="数据库更新">
+      <created>1630991467182</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991467182</updated>
+    </task>
+    <task id="LOCAL-00011" summary="数据库更新">
+      <created>1630991598385</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991598385</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +239,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <MESSAGE value="钉钉发送会话消息调研;" />
+    <MESSAGE value="数据库更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
