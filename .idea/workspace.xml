@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="数据库更新" />
+    <list default="true" id="9686eb04-ed9b-4f0b-b96b-ed67ddbe945b" name="Default Changelist" comment="增加Excel和zip解压工具" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +24,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -44,16 +50,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.last.edited" value="库" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="应用程序.Sudoku">
+  <component name="RunManager" selected="应用程序.ZipExtractor">
     <configuration name="AmsUserPermissionsList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.organization.wzgroup.AmsUserPermissionsList" />
       <module name="jarvis" />
@@ -93,19 +103,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SensibleGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.jarvis.game.SensibleGame" />
-      <module name="jarvis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jarvis.game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Sudoku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jarvis.game.Sudoku" />
       <module name="jarvis" />
@@ -119,20 +116,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZipExtractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jarvis.operations.ZipExtractor" />
+      <module name="jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jarvis.operations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="应用程序.AmsUserPermissionsList" />
       <item itemvalue="应用程序.Createindex" />
       <item itemvalue="应用程序.LucnenApplication" />
       <item itemvalue="应用程序.Sudoku" />
-      <item itemvalue="应用程序.SensibleGame" />
+      <item itemvalue="应用程序.ZipExtractor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Sudoku" />
-        <item itemvalue="应用程序.SensibleGame" />
-        <item itemvalue="应用程序.LucnenApplication" />
+        <item itemvalue="应用程序.ZipExtractor" />
         <item itemvalue="应用程序.AmsUserPermissionsList" />
+        <item itemvalue="应用程序.LucnenApplication" />
         <item itemvalue="应用程序.Createindex" />
+        <item itemvalue="应用程序.Sudoku" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +235,140 @@
       <option name="project" value="LOCAL" />
       <updated>1630991598385</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="数据库更新">
+      <created>1630991766526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991766526</updated>
+    </task>
+    <task id="LOCAL-00013" summary="数据库更新">
+      <created>1630991815078</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991815078</updated>
+    </task>
+    <task id="LOCAL-00014" summary="数据库更新">
+      <created>1630991881405</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991881405</updated>
+    </task>
+    <task id="LOCAL-00015" summary="数据库更新">
+      <created>1630991950541</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991950541</updated>
+    </task>
+    <task id="LOCAL-00016" summary="数据库更新">
+      <created>1630991959983</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1630991959983</updated>
+    </task>
+    <task id="LOCAL-00017" summary="数据库更新">
+      <created>1630992105413</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992105413</updated>
+    </task>
+    <task id="LOCAL-00018" summary="数据库更新">
+      <created>1630992375293</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992375293</updated>
+    </task>
+    <task id="LOCAL-00019" summary="数据库更新">
+      <created>1630992436524</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992436525</updated>
+    </task>
+    <task id="LOCAL-00020" summary="数据库更新">
+      <created>1630992463074</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992463074</updated>
+    </task>
+    <task id="LOCAL-00021" summary="数据库更新">
+      <created>1630992660777</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992660777</updated>
+    </task>
+    <task id="LOCAL-00022" summary="数据库更新">
+      <created>1630992673250</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992673250</updated>
+    </task>
+    <task id="LOCAL-00023" summary="数据库更新">
+      <created>1630992966036</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1630992966036</updated>
+    </task>
+    <task id="LOCAL-00024" summary="增加Excel和zip解压工具">
+      <created>1631704531623</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1631704531623</updated>
+    </task>
+    <task id="LOCAL-00025" summary="增加Excel和zip解压工具">
+      <created>1631704674216</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1631704674216</updated>
+    </task>
+    <task id="LOCAL-00026" summary="增加Excel和zip解压工具">
+      <created>1631704798232</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1631704798232</updated>
+    </task>
+    <task id="LOCAL-00027" summary="增加Excel和zip解压工具">
+      <created>1631704849390</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1631704849390</updated>
+    </task>
+    <task id="LOCAL-00028" summary="增加Excel和zip解压工具">
+      <created>1631704940394</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1631704940394</updated>
+    </task>
+    <task id="LOCAL-00029" summary="增加Excel和zip解压工具">
+      <created>1631705189933</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1631705189933</updated>
+    </task>
+    <task id="LOCAL-00030" summary="增加Excel和zip解压工具">
+      <created>1631705206186</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1631705206186</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +387,8 @@
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="钉钉发送会话消息调研;" />
     <MESSAGE value="数据库更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据库更新" />
+    <MESSAGE value="增加Excel和zip解压工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加Excel和zip解压工具" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

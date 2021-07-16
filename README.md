@@ -58,6 +58,8 @@
 |ZhangTextSimilarity|getWordTextSimilarity(String text1,String text2)|text1:文本1,text2:文本2|Double|word文本相似度计算(开源项目计算精度不高)|
 |TemporaryFiles|stLog(Object msg)|msg:内容|void|存储临时文件内容|
 |TextCharacterSearch|getTextCharacterSearch(String word, String text)|word:词汇<br> text:文本|String|字符与文本间的匹配关系|
+|ZipExtractor|unZip(String source, String dest, String password)|source:zip文件来源<br> dest:解压到制定目录<br> password:压缩包密码|Boolean|zip文件解压|
+|ExcelUtil|writeXlsx(File file, List<String> list, String sheetName)|file:Excel文件地址<br> list:Excel行列内容<br> sheetName:Sheet名称|void|Excel写入工具|
 
 * 查看爬虫robots协议的方法是"在网站URL后面输入：robots.txt "；例如：https://www.jinke.com/robots.txt
 ----------------------------------------------------------------------------------------------------------------
